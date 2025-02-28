@@ -24,12 +24,11 @@
         }
         .name-box {
             position: absolute;
-            bottom: 30px; /* تم خفض الاسم قليلاً */
+            bottom: 20px; /* تم خفض الاسم أكثر */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 38px; /* تكبير الخط */
-            color: #0077cc; /* لون أزرق */
-            font-weight: bold;
+            font-size: 32px; /* تصغير الخط */
+            color: #0077cc; /* اللون الأزرق */
             font-family: 'Diwani Bent', serif; /* استخدام نفس خط الصورة */
             background: none;
             padding: 5px;
@@ -72,13 +71,13 @@
 
     <div class="container" id="card">
         <img src="1.jpeg" alt="Ramadan Greeting" class="card-image">
-        <span class="name-box" id="nameDisplay"> الاسم</span>
+        <span class="name-box" id="nameDisplay">اسم </span>
     </div>
 
     <script>
         function updateName() {
             let name = document.getElementById("nameInput").value;
-            document.getElementById("nameDisplay").textContent = name ? name : "الاسم ";
+            document.getElementById("nameDisplay").textContent = name ? name : "اسم ";
         }
 
         function downloadCard() {
