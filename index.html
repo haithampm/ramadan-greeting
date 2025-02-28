@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بطاقة تهنئة رمضان</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Amiri', Arial, sans-serif;
             background-color: #f5f5f5;
         }
         .container {
@@ -22,32 +23,38 @@
         }
         .name-box {
             position: absolute;
-            bottom: 50px; /* ضبط مكان الاسم */
+            bottom: 45px; /* ضبط موضع الاسم */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 20px;
-            color: #000;
+            font-size: 28px; /* تكبير الخط */
+            color: #8B0000; /* لون غامق لجمالية أكثر */
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 15px;
-            border-radius: 8px;
+            font-family: 'Amiri', serif;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 20px;
+            border-radius: 12px;
+            border: 2px solid #8B0000; /* إطار لتحسين وضوح الاسم */
         }
         .controls {
             margin-top: 15px;
         }
         input {
-            padding: 8px;
-            font-size: 16px;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
             margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
         }
         button {
-            padding: 8px 15px;
-            font-size: 16px;
+            padding: 10px 20px;
+            font-size: 18px;
             background-color: #008CBA;
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #005f7a;
