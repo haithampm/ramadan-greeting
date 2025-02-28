@@ -5,43 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بطاقة تهنئة رمضان</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; background-color: #f8f9fa; }
-        .card {
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .card-container {
             position: relative;
-            width: 500px;
-            height: 500px;
-            margin: 20px auto;
-            background: url('C:\Users\m.haitham\Downloads\1.jpeg') no-repeat center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding-bottom: 50px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .card-image {
+            width: 100%;
+            border-radius: 10px;
         }
         .name {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 22px;
             font-weight: bold;
-            font-size: 24px;
+            color: #ffffff;
             background: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
-            border-radius: 5px;
-            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
         }
-        input { padding: 10px; font-size: 18px; margin: 10px; }
-        button { padding: 10px 20px; font-size: 18px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px; }
     </style>
 </head>
 <body>
-    <h2>بطاقة تهنئة رمضان</h2>
-    <input type="text" id="nameInput" placeholder="أدخل اسمك هنا...">
-    <button onclick="updateName()">تحديث البطاقة</button>
-    <div class="card">
-        <p class="name" id="cardName">اسم الموظف</p>
+
+    <div class="card-container">
+        <img src="1.jpeg" alt="Ramadan Greeting" class="card-image">
+        <div class="name" id="employee-name">اسم الموظف</div>
     </div>
+
     <script>
-        function updateName() {
-            var name = document.getElementById('nameInput').value;
-            document.getElementById('cardName').textContent = name || 'اسم الموظف';
-        }
+        // التقاط الاسم من الرابط وتحديثه داخل البطاقة
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name') || 'اسم الموظف';
+        document.getElementById('employee-name').textContent = name;
     </script>
+
 </body>
 </html>
