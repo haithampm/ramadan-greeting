@@ -24,17 +24,15 @@
         }
         .name-box {
             position: absolute;
-            bottom: 30px; /* تم إنزال الاسم قليلًا */
+            bottom: 10px; /* تم إنزال الاسم للأسفل */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 32px; /* تم تكبير الخط */
-            color: #8B0000; /* لون أحمر داكن */
+            font-size: 34px; /* تكبير الخط */
+            color: #0077cc; /* لون أزرق */
             font-weight: bold;
             font-family: 'Diwani', serif;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 10px 25px;
-            border-radius: 12px;
-            border: 3px solid #8B0000; /* إضافة إطار جميل */
+            background: none; /* إزالة الخلفية */
+            padding: 5px;
         }
         .controls {
             margin-top: 15px;
@@ -79,7 +77,7 @@
     <script>
         function updateName() {
             let name = document.getElementById("nameInput").value;
-            document.getElementById("nameDisplay").textContent = name ? name : "اسم الموظف";
+            document.getElementById("nameDisplay").textContent = name ? name : "الاسم ";
         }
 
         function downloadCard() {
